@@ -1,0 +1,44 @@
+{
+  "name": "web-client-react-redux",
+  "version": "0.1.0",
+  "description": "A starter kit to quickly start a web app using react & redux",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --inline --hot --config config/webpack.dev.config.js",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "starter"
+  ],
+  "author": "Jean-Baptiste PENRATH",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-import-resolver-babel-module-alias": "^1.5.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "html-webpack-plugin": "^2.28.0",
+    "ip": "^1.1.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router": "^3.0.2",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  }
+}

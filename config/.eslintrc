@@ -1,0 +1,7 @@
+// eslintrc for config files
+{
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+  }
+}
