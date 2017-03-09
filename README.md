@@ -1,4 +1,4 @@
-# web-client-react-redux [![npm package][npm-badge]][npm]
+# web-client-react-redux
 A starter kit to quickly start to develop a web app using react & redux.
 Thanks to 
 ## Commands
@@ -8,6 +8,7 @@ Thanks to
 .
 +-- src
     | assets
+        index.html
     | components
         | containers
         | presentational
@@ -16,7 +17,7 @@ Thanks to
         | actions
         | reducers
     | 
-    app.js
+    app.jsx
 | dist
 +-- config
 |     webpack.config.js
