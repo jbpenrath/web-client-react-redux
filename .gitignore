@@ -1,6 +1,9 @@
 # Mac OS
 .DS_Store
 
+# Project
+dist
+
 # Logs
 logs
 *.log
