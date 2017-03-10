@@ -1,6 +1,7 @@
 var path = require('path');
 var ip = require('ip');
 var webpack = require('webpack');
+var poststylus = require('poststylus')
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var node_modules = path.resolve(__dirname, '../node_modules');
@@ -10,16 +11,17 @@ var config = {
   devServer: {
     host: '0.0.0.0',
     port: 1991,
-    compress: true,
     contentBase: path.resolve(__dirname, '../dist'),
+    compress: true,
   },
   devtool: "eval",
   resolve: { 
     alias: [], 
     extensions: ['.js', '.jsx'],
   },
+  context: path.resolve(__dirname, '../src'),
   entry: {
-    app: path.resolve(__dirname, '../src/app.jsx'),
+    app: './app.jsx',
     vendors: [
       "react",
       "react-dom",
@@ -48,23 +50,47 @@ var config = {
     }),
   ],
   module: {
-    loaders: [{
+    rules: [{
       test: /\.jsx?$/,
-      loader: 'babel-loader',
       exclude: node_modules,
-      query: {
-        plugins: [
-          ["module-alias", [
-            { src: path.resolve(__dirname, '../app/assets'), expose: "assets" },
-            { src: path.resolve(__dirname, '../app/components/containers'), expose: "containers" },
-            { src: path.resolve(__dirname, '../app/components/presentationals'), expose: "presentationals" },
-            { src: path.resolve(__dirname, '../app/components/views'), expose: "views" },
-            { src: path.resolve(__dirname, '../app/components/core'), expose: "core" },
-          ]],
-        ],
-      },
-    }]
-  },
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          plugins: [
+            ["module-alias", [
+              { src: path.resolve(__dirname, '../src/assets'), expose: "assets" },
+              { src: path.resolve(__dirname, '../src/components/containers'), expose: "containers" },
+              { src: path.resolve(__dirname, '../src/components/presentationals'), expose: "presentationals" },
+              { src: path.resolve(__dirname, '../src/components/views'), expose: "views" },
+              { src: path.resolve(__dirname, '../src/core'), expose: "core" },
+              { src: path.resolve(__dirname, '../src/style'), expose: "style" },
+            ]],
+          ],
+        },
+      }],
+    }, {
+      test: /\.(styl(us)?|css)$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'stylus-loader',
+          options: {
+            use: [poststylus(['autoprefixer'])],
+            preferPathResolver: 'webpack',
+          }
+        }
+      ]
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/,
+      include: path.resolve(__dirname, '../src/assets/images'),
+      use: 'file-loader?name=images/[hash].[ext]',
+    }, {
+      test: /\.(eot|svg|ttf|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      include: path.resolve(__dirname, '../src/assets/fonts'),
+      use: 'file-loader?name=fonts/[hash].[ext]',
+    }],
+  }
 };
 
 dependencies.forEach(function(dependency) {

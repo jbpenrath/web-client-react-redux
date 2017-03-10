@@ -1,4 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import 'style/main.styl';
+import HelloView from 'views/HelloView';
 
-render(<h1>Hello World 🌍</h1>, document.getElementById('root'));
+render(<HelloView name="Joey" />, document.getElementById('root'));
