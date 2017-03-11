@@ -49,6 +49,7 @@ A starter kit to quickly start to develop a web app using react & redux.
 
 ## To do
 - [x] Add loaders for files (fonts, images) & styles
+- [ ] Set up test (jest, expect, enzyme?)
 - [ ] Is [nib](https://github.com/tj/nib) effective ? ([To read](https://github.com/shama/stylus-loader))
 - [ ] Specify configuration
     - [Eslint](http://eslint.org/docs/user-guide/configuring)

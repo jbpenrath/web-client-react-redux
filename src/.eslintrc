@@ -7,6 +7,9 @@
   "globals": {
     "window": true,
     "document": true,
+    "it": true,
+    "describe": true,
+    "expect": true,
   },
   "rules": {}
 }
