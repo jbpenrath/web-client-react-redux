@@ -1,6 +1,9 @@
 # web-client-react-redux
 A starter kit to quickly start to develop a web app using react & redux.
 
+## Use case
+The well known Todo list application to first approve this starter kit then also to show its operating.
+
 ## Commands
 - Development: `npm start`
 - Clean: `npm run clean`
