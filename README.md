@@ -38,6 +38,7 @@ A starter kit to quickly start to develop a web app using react & redux.
         |   |       ContainerA_constants.js
         |   |       ContainerA_reducer.js
         |   |       ContainerA.jsx
+        |   |       ContainerA.spec.js
         |   |
         |   `-- presentational/
         |   |   `-- componentA/
