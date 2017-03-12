@@ -5,6 +5,9 @@ A starter kit to quickly start to develop a web app using react & redux.
 - Development: `npm start`
 - Clean: `npm run clean`
 - Build for production: `npm run build`
+- Test: `npm test`
+- Test with coverage: `npm run test:coverage`
+- Test watch mode: `npm run test:watch`
 
 ## Stack
 - build: [Webpack 2](https://webpack.js.org)
