@@ -15,9 +15,11 @@ A starter kit to quickly start to develop a web app using react & redux.
 ## Folder tree
     .
     `-- config/
+    |   jest.config.json
     |   webpack.dev.config.js
     |   webpack.production.config.js
     |
+    `-- coverage/
     `-- dist/
     |
     `-- src/
@@ -28,6 +30,11 @@ A starter kit to quickly start to develop a web app using react & redux.
         |
         `-- components/
         |   `-- containers/
+        |   |   `-- containerA/
+        |   |       ContainerA_actions.js
+        |   |       ContainerA_constants.js
+        |   |       ContainerA_reducer.js
+        |   |       ContainerA.jsx
         |   |
         |   `-- presentational/
         |   |   `-- componentA/
@@ -38,8 +45,8 @@ A starter kit to quickly start to develop a web app using react & redux.
         |   `-- views/
         |
         `-- core/
-        |   `-- actions/
-        |   `-- reducers/
+        |     reducer.js
+        |     store.js
         |
         `-- style/
         |   main.styl
@@ -49,7 +56,8 @@ A starter kit to quickly start to develop a web app using react & redux.
 
 ## To do
 - [x] Add loaders for files (fonts, images) & styles
-- [ ] Set up test (jest, expect, enzyme?)
-- [ ] Is [nib](https://github.com/tj/nib) effective ? ([To read](https://github.com/shama/stylus-loader))
-- [ ] Specify configuration
+- [x] Set up test (jest, expect, enzyme?)
+- [ ] Does use [react-immutable-proptypes](https://www.npmjs.com/package/react-immutable-proptypes)?
+- [ ] Is [nib](https://github.com/tj/nib) effective ? ([More...](https://github.com/shama/stylus-loader))
+- [x] Specify configuration
     - [Eslint](http://eslint.org/docs/user-guide/configuring)
