@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { Router, Route, hashHistory } from 'react-router';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { PropTypes } from 'react';
 import { render } from 'react-dom';
 import 'style/main.styl';
@@ -21,7 +21,7 @@ const todoStore = createStoreWithMiddleware(
 
 const TodoApp = ({ store }) => (
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router>
       <Route path="/" component={Todos} />
       <Route path="/archived" component={TodoArchived} />
     </Router>
