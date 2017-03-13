@@ -1,4 +1,6 @@
 # web-client-react-redux
+### ⚠ In Progress...
+
 A starter kit to quickly start to develop a web app using react & redux.
 
 ## Use case
