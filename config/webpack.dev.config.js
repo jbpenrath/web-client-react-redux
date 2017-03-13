@@ -12,7 +12,7 @@ var config = {
     host: '0.0.0.0',
     port: 1991,
     contentBase: path.resolve(__dirname, '../dist'),
-    apiHistoryFallback: true,
+    historyApiFallback: true,
     compress: true,
   },
   devtool: "eval",
