@@ -12,6 +12,7 @@ var config = {
     host: '0.0.0.0',
     port: 1991,
     contentBase: path.resolve(__dirname, '../dist'),
+    apiHistoryFallback: true,
     compress: true,
   },
   devtool: "eval",
@@ -26,7 +27,7 @@ var config = {
       "react",
       "react-dom",
       "react-redux",
-      "react-router",
+      "react-router-dom",
       "react-router-redux",
       "redux",
       "redux-thunk"
