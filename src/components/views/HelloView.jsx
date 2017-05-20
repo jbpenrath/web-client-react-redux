@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react';
+import Title from 'presentationals/Title';
 import './HelloView.styl';
 
 const HelloView = ({ name = 'World' }) => (
-  <h1>Hello {name} 🌍</h1>
+  <Title>Hello {name}!</Title>
 );
 
 HelloView.propTypes = {
