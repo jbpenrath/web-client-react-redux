@@ -11,5 +11,13 @@
     "describe": true,
     "expect": true,
   },
-  "rules": {}
+  "rules": {},
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.dev.config.js",
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  }
 }

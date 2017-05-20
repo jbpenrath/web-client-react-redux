@@ -16,8 +16,15 @@ var config = {
     compress: true,
   },
   devtool: "eval",
-  resolve: { 
-    alias: [], 
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, '../src/assets'),
+      containers: path.resolve(__dirname, '../src/components/containers'),
+      presentationals: path.resolve(__dirname, '../src/components/presentationals'),
+      views: path.resolve(__dirname, '../src/components/views'),
+      core: path.resolve(__dirname, '../src/core'),
+      style: path.resolve(__dirname, '../src/style')
+    },
     extensions: ['.js', '.jsx'],
   },
   context: path.resolve(__dirname, '../src'),
@@ -54,21 +61,7 @@ var config = {
     rules: [{
       test: /\.jsx?$/,
       exclude: node_modules,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          plugins: [
-            ["module-alias", [
-              { src: path.resolve(__dirname, '../src/assets'), expose: "assets" },
-              { src: path.resolve(__dirname, '../src/components/containers'), expose: "containers" },
-              { src: path.resolve(__dirname, '../src/components/presentationals'), expose: "presentationals" },
-              { src: path.resolve(__dirname, '../src/components/views'), expose: "views" },
-              { src: path.resolve(__dirname, '../src/core'), expose: "core" },
-              { src: path.resolve(__dirname, '../src/style'), expose: "style" },
-            ]],
-          ],
-        },
-      }],
+      use: 'babel-loader',
     }, {
       test: /\.(styl(us)?|css)$/,
       use: [
