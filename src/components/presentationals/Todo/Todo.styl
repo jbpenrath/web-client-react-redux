@@ -1,0 +1,67 @@
+.TodoList 
+  border-left 2px solid #4F5560
+  box-sizing border-box
+  display inline-block
+  margin 0 0 109px 48px
+  padding 24px 0 0px 0
+  max-height 500px
+  transform translateY(-32px)
+  width 292px
+  
+  
+  .Todo
+    transform translateY(32px)
+    box-sizing content-box
+    cursor pointer
+    padding 12px 12px 10px 48px
+    position relative
+    text-align left
+
+    &:before
+      background-color #F1DB2A
+      background-position center center
+      background-repeat no-repeat
+      background-size 0px 0px
+      border 2px solid #2E333C
+      border-radius 100%
+      content ''
+      display block
+      height 8px
+      left -1px
+      position absolute
+      top 50%
+      transform translate(-50%, -50%)
+      transition all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95)
+      width 8px
+
+    &_completed
+      .Todo-task
+        text-decoration line-through
+      .Todo-task, .Todo-timestamp
+        opacity 0.35
+      &:before
+        background-color #2E333C
+        background-image url("../../../assets/images/check_yellow.svg")
+        background-size 18px 18px
+        height 32px
+        width 32px
+
+    &:hover:before
+      background-color #F1DB2A
+      background-image url("../../../assets/images/check_grey.svg")
+      background-size 18px 18px
+      height 32px
+      width 32px
+
+    .Todo-task
+      color #FEFEFE
+      font-size 20px
+      line-height 26px
+      text-shadow 0 1px 1px #1B1E23
+      transition all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95)
+      
+    .Todo-timestamp
+      color #7C8087
+      font-size 12px
+      transition all 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95)
+      

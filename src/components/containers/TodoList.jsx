@@ -1,24 +1,34 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Todo from 'presentationals/Todo.jsx';
+import { toggleTodo } from 'core/actions/actions';
 import { List } from 'immutable';
+import Todo from '../presentationals/Todo/Todo.jsx';
 
-const TodoList = ({ todos }) => (
-  <ul>
+const TodoList = ({ todos, toggleTodoEvent }) => (
+  <ul className="TodoList">
     {
-      todos.map(todo => <Todo todo={todo} />)
+      todos.map(todo => (
+        <Todo
+          key={todo.get('primaryKey')}
+          todo={todo}
+          onClick={() => toggleTodoEvent(todo.get('primaryKey'))}
+        />
+      ))
     }
   </ul>
 );
 
 TodoList.propTypes = {
   todos: PropTypes.instanceOf(List).isRequired,
+  toggleTodoEvent: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = (state) => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    todos: state.get('todos'),
+    toggleTodoEvent: (id) => {
+      dispatch(toggleTodo(id));
+    },
   };
 };
 
-export default connect(mapStateToProps)(TodoList);
+export default connect(null, mapDispatchToProps)(TodoList);

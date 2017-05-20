@@ -1,30 +1,31 @@
+import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React, { PropTypes } from 'react';
-import { render } from 'react-dom';
+import { Map, List } from 'immutable';
 import 'style/main.styl';
 import reducers from 'core/reducers/reducers';
+import { fetchTodos } from 'core/actions/actions';
 import Todos from 'views/Todos/Todos';
-import TodoArchived from 'views/TodoArchived/TodoArchived';
 
 window.React = React;
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const middleware = applyMiddleware(thunk);
 
-const todoStore = createStoreWithMiddleware(
+const todoStore = createStore(
   reducers,
-  {},
-  window.devToolsExtension ? window.devToolsExtension() : f => f,
+  compose(
+    middleware,
+    window.devToolsExtension ? window.devToolsExtension() : f => f,
+  ),
 );
+
+todoStore.dispatch(fetchTodos);
 
 const TodoApp = ({ store }) => (
   <Provider store={store}>
-    <Router>
-      <Route path="/" component={Todos} />
-      <Route path="/archived" component={TodoArchived} />
-    </Router>
+    <Todos />
   </Provider>
 );
 
