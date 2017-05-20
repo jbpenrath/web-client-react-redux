@@ -14,6 +14,7 @@ var config = {
   entry: {
     app: path.resolve(__dirname, '../src/app.jsx'),
     vendors: [
+      "history",
       "react",
       "react-dom",
       "react-redux",

@@ -24,13 +24,14 @@ var config = {
   entry: {
     app: './app.jsx',
     vendors: [
+      "history",
       "react",
       "react-dom",
       "react-redux",
       "react-router-dom",
       "react-router-redux",
       "redux",
-      "redux-thunk"
+      "redux-thunk",
     ],
   },
   output: {
