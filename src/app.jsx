@@ -3,7 +3,6 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import React, { PropTypes } from 'react';
-import { Map, List } from 'immutable';
 import 'style/main.styl';
 import reducers from 'core/reducers/reducers';
 import { fetchTodos } from 'core/actions/actions';

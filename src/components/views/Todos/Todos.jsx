@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
-import TodoList from '../../containers/TodoList';
+import TodoList from 'containers/TodoList';
 import AddTodo from 'containers/AddTodo';
 import VisibilityFilter from 'containers/VisibilityFilter';
 
