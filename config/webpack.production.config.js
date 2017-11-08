@@ -41,7 +41,10 @@ var config = {
       disable: false,
       allChunks: true 
     }),
-    new UglifyJSPlugin({comments: false}),
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        comments: false
+      }}),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
