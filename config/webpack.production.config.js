@@ -9,14 +9,6 @@ var node_modules = path.resolve(__dirname, '../node_modules');
 
 var config = {
   resolve: {
-    alias: {
-      assets: path.resolve(__dirname, '../src/assets'),
-      containers: path.resolve(__dirname, '../src/components/containers'),
-      presentationals: path.resolve(__dirname, '../src/components/presentationals'),
-      views: path.resolve(__dirname, '../src/components/views'),
-      core: path.resolve(__dirname, '../src/core'),
-      style: path.resolve(__dirname, '../src/style')
-    },
     extensions: ['.js', '.jsx'],
   },
   entry: {
