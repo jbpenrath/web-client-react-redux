@@ -1,4 +1,5 @@
 {
   "rootDir": "../src",
-  "collectCoverageFrom": ["**/*.{js,jsx}"]
+  "collectCoverageFrom": ["**/*.{js,jsx}"],
+  "configFile": "./jest-global.js"
 }

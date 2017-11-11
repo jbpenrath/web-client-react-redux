@@ -17,19 +17,10 @@ var config = {
   },
   devtool: "eval",
   resolve: {
-    alias: {
-      assets: path.resolve(__dirname, '../src/assets'),
-      containers: path.resolve(__dirname, '../src/components/containers'),
-      presentationals: path.resolve(__dirname, '../src/components/presentationals'),
-      views: path.resolve(__dirname, '../src/components/views'),
-      core: path.resolve(__dirname, '../src/core'),
-      style: path.resolve(__dirname, '../src/style')
-    },
     extensions: ['.js', '.jsx'],
   },
-  context: path.resolve(__dirname, '../src'),
   entry: {
-    app: './app.jsx',
+    app: path.resolve(__dirname, '../src/app.jsx'),
     vendors: [
       "history",
       "react",

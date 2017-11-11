@@ -15,7 +15,7 @@ The well known Todo list application to first approve this starter kit then also
 - Test watch mode: `npm run test:watch`
 
 ## Stack
-- build: [Webpack 2](https://webpack.js.org)
+- build: [Webpack 3](https://webpack.js.org)
 - styles: [Stylus](http://stylus-lang.com) with postcss ([autoprefixer](https://github.com/postcss/autoprefixer))
 - View | Controller: [react](https://facebook.github.io/react/)
 - Model | Controller: [redux](http://redux.js.org)

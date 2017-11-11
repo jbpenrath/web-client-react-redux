@@ -9,14 +9,6 @@ var node_modules = path.resolve(__dirname, '../node_modules');
 
 var config = {
   resolve: {
-    alias: {
-      assets: path.resolve(__dirname, '../src/assets'),
-      containers: path.resolve(__dirname, '../src/components/containers'),
-      presentationals: path.resolve(__dirname, '../src/components/presentationals'),
-      views: path.resolve(__dirname, '../src/components/views'),
-      core: path.resolve(__dirname, '../src/core'),
-      style: path.resolve(__dirname, '../src/style')
-    },
     extensions: ['.js', '.jsx'],
   },
   entry: {
@@ -42,7 +34,10 @@ var config = {
       disable: false,
       allChunks: true 
     }),
-    new UglifyJSPlugin({comments: false}),
+    new UglifyJSPlugin({
+      uglifyOptions: {
+        comments: false
+      }}),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': JSON.stringify('production'),
