@@ -1,6 +1,4 @@
 # web-client-react-redux
-### ⚠ In Progress...
-
 A starter kit to quickly start to develop a web app using react & redux.
 
 ## Use case
@@ -24,6 +22,7 @@ The well known Todo list application to first approve this starter kit then also
     .
     `-- config/
     |   jest.config.json
+    |   jest.global.js
     |   webpack.dev.config.js
     |   webpack.production.config.js
     |
@@ -64,6 +63,7 @@ The well known Todo list application to first approve this starter kit then also
         app.jsx
 
 ## To do
+- [ ] All tests pass
 - [x] Add loaders for files (fonts, images) & styles
 - [x] Set up test (jest, expect, enzyme?)
 - [ ] Does use [react-immutable-proptypes](https://www.npmjs.com/package/react-immutable-proptypes)?
