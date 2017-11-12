@@ -19,6 +19,7 @@ A starter kit to quickly start to develop a web app using react & redux.
     .
     `-- config/
     |   jest.config.json
+    |   jest.global.js
     |   webpack.dev.config.js
     |   webpack.production.config.js
     |
