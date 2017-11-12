@@ -1,6 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import Todos from './Todos';
+
+const { shallow } = Enzyme;
 
 describe('<Todolist />', () => {
   it('renders a first level title', () => {

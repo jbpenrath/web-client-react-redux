@@ -1,6 +1,6 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import TodoArchived from './TodoArchived';
+
+const { shallow } = global.Enzyme;
 
 describe('<TodoArchived />', () => {
   it('renders a first level title', () => {
