@@ -1,9 +1,9 @@
 {
-  "rootDir": "..",
+  "rootDir": "../src",
   "collectCoverageFrom": ["**/*.{js,jsx}"],
-  "setupFiles": ["<rootDir>/config/jest.global.js"],
+  "setupFiles": ["<rootDir>/../config/jest.global.js"],
   "modulePathIgnorePatterns": ["jest.global.js"],
   "moduleNameMapper": {
-    "\\.(css|styl)$": "<rootDir>/node_modules/jest-css-modules"
+    "\\.(css|styl)$": "<rootDir>/../node_modules/jest-css-modules"
   }
 }
